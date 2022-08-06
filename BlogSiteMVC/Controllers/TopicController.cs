@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlogSiteMVC.Controllers
 {
-    public class UserController : Controller
+    public class TopicController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Settings()
+        public IActionResult List()
         {
             return View();
         }

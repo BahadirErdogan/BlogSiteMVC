@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Topic List";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index">
+                <img src="~/img/logo-drop.png" width="160" height="90" alt="Web Sitesi Logosu" />
+            </a>
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="CreateArticle">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="UsersArticles">My Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Settings">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="SignOut">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post">
+
+    <h3>Topics You Can Follow</h3>
+
+    <table class="table table-bordered table-sm">
+        @*@if (Model.NonMembers.Count() == 0)
+            {
+                <tr><td coldspan="2">All Topics Are Already Followed</td></tr>
+
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Model.TopicName</td>
+                        <td>
+                            <button type="submit" class="btn btn-dark" asp-route-id="@Model.Id">Follow</button>
+                        </td>
+                    </tr>
+                }
+            }*@
+
+        @*Yukarıdaki gibi foreach ile yapılacak*@
+
+
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-dark" asp-route-id="#"> Follow </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-dark" asp-route-id="#"> Follow </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-dark" asp-route-id="#"> Follow </button>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <hr />
+
+    <h3>Topics You Can Unfollow</h3>
+
+    <table class="table table-bordered table-sm">
+        @*@if (Model.NonMembers.Count() == 0)
+            {
+                <tr><td coldspan="2">You have no topics</td></tr>
+
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Model.TopicName</td>
+                        <td>
+                            <button type="submit" class="btn btn-dark" asp-route-id="@Model.Id">Follow</button>
+                        </td>
+                    </tr>
+                }
+            }*@
+
+        @*Yukarıdaki gibi foreach ile yapılacak*@
+
+
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-outline-dark" asp-route-id="#">Unfollow</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-outline-dark" asp-route-id="#">Unfollow</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Topic-1</td>
+            <td>
+                <button type="submit" class="btn btn-outline-dark" asp-route-id="#">Unfollow</button>
+            </td>
+        </tr>
+
+
+    </table>
+
+
+
+
+
+</form>
