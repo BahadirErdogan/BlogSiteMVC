@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Writer Detail";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index">
+                <img src="~/img/logo-drop.png" width="160" height="90" alt="Web Sitesi Logosu" />
+            </a>
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Index">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@*Yazar Bilgileri*@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678130-profile-alt-4-512.png" style="border-radius:50%; width:100%; height:auto;" />
+        </div>
+        <div class="col-9">
+            <h2>Writer Name</h2>
+            <p>Short Bio</p>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row"><h3>Most Popular Articles</h3></div>
+    <hr />
+    <div class="row" style="margin-top:12px;">
+        @*Yazarın makaleleri listelenecek*@
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+    </div>
+
+</div>

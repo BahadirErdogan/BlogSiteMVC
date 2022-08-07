@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Sign Up Page";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignUp">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignIn">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h3>Sign Up</h3>
+<hr />
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-6" style="padding:0px;">
+            <h5>Don't waste any more time and join us!</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent turpis ligula, congue vel turpis at, egestas pulvinar sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris gravida eleifend dolor, sit amet rhoncus magna convallis in. Aenean dignissim porta mauris, sed viverra lectus porttitor ac. </p>
+            <hr />
+            <img src="~/img/logo-drop-lrg.png" />
+
+        </div>
+
+
+
+        <div class="col-6">
+            <h5>Register!</h5>
+            <p>Easy and fast!</p>
+            <form asp-action="SignUp" method="post">
+                <div class="form-group">
+
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="text" class="form-control" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="date" class="form-control" placeholder="Birthday" />
+                </div>
+                <div class="form-check">
+                    <input @*asp-for="..."*@ class="form-check-input" type="radio" name="gender" id="flexRadioMale">
+                    <label class="form-check-label" for="flexRadioMale">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input @*asp-for="..."*@ class="form-check-input" type="radio" name="gender" id="flexRadioFemale">
+                    <label class="form-check-label" for="flexRadioFemale">
+                        Female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input @*asp-for="..."*@ class="form-check-input" type="radio" name="gender" id="flexRadioOther">
+                    <label class="form-check-label" for="flexRadioOther">
+                        Other
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input @*asp-for="..."*@ class="form-check-input" type="radio" name="gender" id="flexRadioNotRespond">
+                    <label class="form-check-label" for="flexRadioNotRespond">
+                        Prefer not to respond
+                    </label>
+                </div>
+                <div>
+                    <select @*asp-for="..."*@ class="form-select" style="margin-top:16px;margin-bottom:16px;">
+                        <option selected>Profession</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="email" class="form-control" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="text" class="form-control" placeholder="UserName" />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="password" class="form-control" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="..."*@ type="password" class="form-control" placeholder="Password" />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark">Sign Up</button>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckTerms">
+                    <label class="form-check-label" for="flexCheckTerms">
+                        Please read and agree to Drop’s <a href="#" class="link-info">Terms of Service and User Agreement</a>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckPrivacy">
+                    <label class="form-check-label" for="flexCheckPrivacy">
+                        Please read and agree to Drop’s <a href="#" class="link-info">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <div>
+                    <a class="nav-link text-primary" style="padding-left:0px;" asp-controller="#" asp-action="#">You have already an account?</a>
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

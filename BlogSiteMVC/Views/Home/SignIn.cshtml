@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Sign In Page";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+            
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignUp">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignIn">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-6" style="padding:0px;">
+
+            <img src="~/img/logo-drop-lrg.png" />
+
+        </div>
+
+        
+
+        <div class="col-6">
+
+            <form asp-action="SignIn" method="post">
+                <div class="form-group">
+                    <h3>Sign In</h3>
+                    <hr />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="UserName"*@ type="text" class="form-control" placeholder="UserName" />
+                </div>
+                <div class="form-group">
+                    <input @*asp-for="Password"*@ type="password" class="form-control" placeholder="Password" />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark">Sign In</button>
+                </div>
+
+                <div>
+                    <a class="nav-link text-primary" style="padding:0px;" asp-area="" asp-controller="#" asp-action="#">Forgot Password?</a>
+                </div>
+
+                <div>
+                    <label>
+                        No Account? <a href="#" class="link-info">Create One!</a>
+                    </label>
+                    @*<p>
+                        No Account?                  
+                    </p>      
+                    <button type="button" class="btn btn-outline-dark" asp-area="" asp-controller="#" asp-action="#">Create One</button>*@
+                </div>
+
+            </form>        
+           
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+

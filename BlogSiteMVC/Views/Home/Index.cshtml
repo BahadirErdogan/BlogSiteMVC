@@ -2,5 +2,169 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>HomePage</h1>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/img/logo-drop.png" width="160" height="90" alt="Web Sitesi Logosu" />
+            </a>
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignUp">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignIn">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <h2>Drop Blog Site</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at dui vel enim vulputate commodo. Mauris id hendrerit quam, eu posuere diam. Proin sed congue lectus. Sed mollis, tellus id hendrerit fringilla, dolor metus iaculis tellus, a vehicula diam nunc sed erat. Nullam tortor justo, congue ut purus ut, faucibus dictum orci. Phasellus sit amet metus et quam consequat semper. Pellentesque accumsan venenatis pellentesque.
+    </p>
+    <p>
+        Aenean non augue lectus. Phasellus bibendum justo non arcu sollicitudin, vitae dictum eros dignissim. Maecenas non porttitor neque. Nullam arcu est, aliquet sit amet dignissim nec, pulvinar quis ante. Integer nisl ligula, imperdiet sed erat in, suscipit eleifend lacus. Cras congue magna faucibus erat sodales tincidunt. Pellentesque viverra diam nunc, viverra lacinia eros pellentesque nec. Quisque pulvinar sapien in risus aliquam, ultrices posuere velit tristique. Quisque urna ipsum, faucibus in arcu eget, varius hendrerit ipsum. Nulla ultrices consequat dapibus.
+    </p>
+
+    <p>
+        <a class="nav-link text-primary" style="padding-left:0px;" asp-controller="#" asp-action="#">Learn More..</a>
+    </p>
+
+    <button type="button" class="btn btn-dark">Join Us!</button>
+
+</div>
+
+<br />
+<hr />
+<div class="container">
+    <div class="row"><h3>Most Popular Articles</h3></div>
+    <br />
+    <div class="row" style="margin-top:12px;">
+        @*En çok okunan ilk 3 makale for döngüsü ile aşağıdaki div'e yazılacak*@
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:12px;">
+        @*En çok okunan 4-5-6 makale for döngüsü ile aşağıdaki div'e yazılacak*@
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+        <div class="col">
+            <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+            <div class="card-body text-white bg-dark">
+                <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<br />
+<hr />
+<div class="container">
+    <div class="row"><h3>Latest Articles</h3></div>
+    <br />
+    <div class="row" style="margin-top:12px;">
+        <div class="col-8">
+            <div class="row">
+                <img class="card-img-top" src="https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:12px;">
+                <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:12px;">
+                <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+
+            @*Jquery ile Load More Yapılabilir*@
+
+        </div>
+        <div class="col-4">
+            <div class="container">
+                <h3>Topics</h3>
+                <div class="row">
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-1</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-2</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display:flex; align-items:center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic3Topic3Topic3</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-444</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-5</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
 

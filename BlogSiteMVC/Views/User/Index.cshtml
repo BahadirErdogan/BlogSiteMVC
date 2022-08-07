@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "User Home Page";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow bg-secondary mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index">
+                <img src="~/img/logo-drop.png" width="160" height="90" alt="Web Sitesi Logosu" />
+            </a>
+            <button class="navbar-toggler navbar-dark border-white" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="CreateArticle">Write</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="UsersArticles">My Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Settings">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="SignOut">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@*Takip Edilen Konular*@
+<div class="container">
+    
+    <div class="row">
+        @*Buraya foreach ile takip edilen konular yazılacak*@
+        <div class="col" style="padding:0px; padding-top:8px; display: flex; align-items: center;">
+            <h5>Your Topics :</h5>
+        </div>
+
+        <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center; justify-content:center;">
+            <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-1</a>
+        </div>
+
+        <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center; justify-content:center;">
+            <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-1</a>
+        </div>
+
+        <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center; justify-content:center;">
+            <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-1</a>
+        </div>
+        <div class="col" style="margin: 8px; display: flex; align-items: center;">
+            <a class="btn btn-dark" asp-controller="#" asp-action="#">Add New Topic</a>
+        </div>
+    </div>
+</div>
+<br />
+<hr />
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <h3>Latest Articles For Your Topics</h3>
+        </div>
+
+        <div class="col" style="display:flex; flex-direction:row-reverse;">
+            <input role="combobox" placeholder="search" />
+        </div>     
+        
+    </div>
+    <hr />
+
+    <div class="row" style="margin-top:12px;">
+        <div class="col-6">
+            <div class="row">
+                <img class="card-img-top" src="https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:12px;">
+                <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top:12px;">
+                <img class="card-img-top" src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap"> @*Makale görseli*@
+                <div class="card-body text-white bg-dark">
+                    <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                    <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                </div>
+            </div>
+
+            @*Jquery ile Load More Yapılabilir*@
+
+        </div>
+        <div class="col-6">
+            <div class="container">
+
+                <h3>Topics</h3>
+                <div class="row">
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-1</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-2</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display:flex; align-items:center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic3Topic3Topic3</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-444</a>
+                    </div>
+                    <div class="col bg-secondary text-white rounded" style="margin: 8px; display: flex; align-items: center;">
+                        <a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Topic-5</a>
+                    </div>
+                </div>
+                <hr />
+
+
+                <div class="row"><h3>Most Popular Articles</h3></div>
+                <br />
+                @*En çok okunanlar for ile yazdırılacak*@
+                <div class="row">
+                    <div class="card-body text-white bg-dark" style="margin-bottom:16px;">
+                        <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                        <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-body text-white bg-dark" style="margin-bottom:16px";>
+                        <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                        <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-body text-white bg-dark" style="margin-bottom:16px";>
+                        <h5 class="card-title"><a class="nav-link text-white" asp-area="" asp-controller="#" asp-action="#">Makale Başlığı</a></h5>
+                        <p class="card-text">June 22, 5 min. Read, 256 Views</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
